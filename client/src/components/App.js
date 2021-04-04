@@ -13,6 +13,7 @@ import FooterSection from "./homepage/FooterSection"
 import SkillSet from "./homepage/SkillSet"
 import RecentWorks from "./homepage/RecentWorks"
 import Intro from "./homepage/Intro"
+import HeaderTopBar from "./layout/HeaderTopBar"
 
 import { Layout } from 'antd';
 
@@ -32,7 +33,8 @@ const App = (props) => {
   }, []);
   return (
     <Router>
-      <TopBar user={currentUser} />
+      {/* <TopBar user={currentUser} /> */}
+      <HeaderTopBar/>
       <Layout>
         <Content>
           <Switch>

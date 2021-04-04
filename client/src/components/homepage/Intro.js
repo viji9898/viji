@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 
+
+const title = (
+  <h4>Hi I'm Viji. Nice to meet you</h4>
+)
+
 const introData = `Since beginning my journey as a freelance designer nearly
 10 years ago I've done remote work for agencies, consulted for
 startups, and collaborated with talented people to create digital 
@@ -18,6 +23,7 @@ const Intro = () => {
       paddingTop: "75px",
       paddingBottom: "150px"
     }} height={5000} >
+      {title}
       {introData}
     </div>
       </div>

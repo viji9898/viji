@@ -84,21 +84,21 @@ const SkillSet = () => {
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "white",
-      padding: "50px",
+      padding: "10px",
     }}>
-      <div className="site-card-wrapper" style={{marginTop:"-150px", textAlign:"center"}}>
-            <Row gutter={16}>
-          <Col span={8}>
+      <div style={{marginTop:"-120px", textAlign:"center"}}>
+            <Row gutter={[16, { xs: 6, sm: 16, md: 24, lg: 32 }]}>
+          <Col className="gutter-row" md={{ span: 8 }} xs={{ span: 24}}>
             <Card title="Design" bordered={true}>
               {designData}
             </Card>
           </Col>
-          <Col span={8}>
+          <Col  className="gutter-row" md={{ span: 8 }} xs={{ span: 24}}>
             <Card title="Front-end Developer" bordered={true}>
               {frontEndData}
             </Card>
           </Col>
-          <Col span={8}>
+          <Col className="gutter-row" md={{ span: 8 }} xs={{ span: 24}}>
             <Card title="Back-end Developer" bordered={true}>
               {backEndData}
             </Card>
