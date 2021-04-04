@@ -8,6 +8,17 @@ import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
 
+import HomePage from "./homepage/HomePage"
+import FooterSection from "./homepage/FooterSection"
+import SkillSet from "./homepage/SkillSet"
+import RecentWorks from "./homepage/RecentWorks"
+import Intro from "./homepage/Intro"
+
+import { Layout } from 'antd';
+
+const { Header, Footer, Sider, Content } = Layout;
+
+
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
   useEffect(() => {
@@ -22,13 +33,21 @@ const App = (props) => {
   return (
     <Router>
       <TopBar user={currentUser} />
-      <Switch>
-        <Route exact path="/">
-          <h2>Hello from react</h2>
-        </Route>
-        <Route exact path="/users/new" component={RegistrationForm} />
-        <Route exact path="/user-sessions/new" component={SignInForm} />
-      </Switch>
+      <Layout>
+        <Content>
+          <Switch>
+            <Route exact path="/" component={HomePage}/>
+            <Route exact path="/users/new" component={RegistrationForm} />
+            <Route exact path="/user-sessions/new" component={SignInForm} />
+          </Switch>
+          <Intro/>
+          <SkillSet/>
+          <RecentWorks/>
+        </Content>
+      <Footer>
+        <FooterSection/>
+      </Footer>
+    </Layout>
     </Router>
   );
 };
